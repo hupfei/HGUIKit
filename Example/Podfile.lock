@@ -1,0 +1,16 @@
+PODS:
+  - HGUIKit (0.1.0)
+
+DEPENDENCIES:
+  - HGUIKit (from `../`)
+
+EXTERNAL SOURCES:
+  HGUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HGUIKit: 85b43f48ca1beef839fd43fbf5ac70a88d9af73b
+
+PODFILE CHECKSUM: d817b7d285c54aa4de66a21e76aa24ec601db139
+
+COCOAPODS: 1.10.0
