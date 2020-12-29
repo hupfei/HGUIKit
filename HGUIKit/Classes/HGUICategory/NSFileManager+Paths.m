@@ -4,7 +4,6 @@
 //
 
 #import "NSFileManager+Paths.h"
-#import <YYKit/NSString+YYAdd.h>
 
 @implementation NSFileManager (Paths)
 
@@ -64,7 +63,7 @@
 
 + (NSString *)getFileResourcePath:(NSString *)fileName
 {
-    if (!fileName.isNotBlank)
+    if (fileName.length <= 0)
     {
         return nil;
     }
@@ -75,7 +74,7 @@
 
 + (BOOL)isExistFileInDocument:(NSString *)fileName
 {
-    if (!fileName.isNotBlank)
+    if (fileName.length <= 0)
     {
         return NO;
     }
@@ -106,7 +105,7 @@
 
 + (BOOL)removeFolderInDocumet:(NSString *)aFolderNameInDoc
 {
-    if (!aFolderNameInDoc.isNotBlank)
+    if (aFolderNameInDoc.length <= 0)
     {
         return YES ;
     }
@@ -121,7 +120,7 @@
 
 + (BOOL)removeFolderInCahe:(NSString *)aFolderNameInCahe
 {
-    if (!aFolderNameInCahe.isNotBlank)
+    if (aFolderNameInCahe.length <= 0)
     {
         return YES ;
     }
@@ -142,7 +141,7 @@
 // 判断一个文件是否存在于resource目录下
 + (BOOL)isExistFileInResource:(NSString *)fileName
 {
-    if (!fileName.isNotBlank)
+    if (fileName.length <= 0)
     {
         return NO;
     }
@@ -157,7 +156,7 @@
 
 + (BOOL)isExistFile:(NSString *)aFilePath
 {
-    if (!aFilePath.isNotBlank)
+    if (aFilePath.length <= 0)
     {
         return NO;
     }
@@ -167,7 +166,7 @@
 
 + (BOOL)copyResourceFileToDocumentPath:(NSString *)resourceName
 {
-    if (!resourceName.isNotBlank)
+    if (resourceName.length <= 0)
     {
         return NO;
     }
@@ -192,7 +191,7 @@
 
 + (BOOL)deleteFileAtPath:(NSString *)filePath
 {
-    if (!filePath.isNotBlank)
+    if (filePath.length <= 0)
     {
         return NO;
     }
@@ -207,7 +206,7 @@
 
 + (NSDictionary *)getFileAttributsAtPath:(NSString *)filePath
 {
-    if (!filePath.isNotBlank)
+    if (filePath.length <= 0)
     {
         return nil;
     }

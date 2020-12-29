@@ -1,9 +1,8 @@
 PODS:
-  - HGUIKit (0.1.0):
+  - HGUIKit (0.1.1):
     - MJRefresh
     - QMUIKit
     - ReactiveObjC
-    - YYKit
   - MJRefresh (3.5.0)
   - QMUIKit (4.2.1):
     - QMUIKit/QMUIComponents (= 4.2.1)
@@ -323,9 +322,6 @@ PODS:
   - QMUIKit/QMUIResources (4.2.1)
   - QMUIKit/QMUIWeakObjectContainer (4.2.1)
   - ReactiveObjC (3.1.1)
-  - YYKit (1.0.9):
-    - YYKit/no-arc (= 1.0.9)
-  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - HGUIKit (from `../`)
@@ -335,18 +331,16 @@ SPEC REPOS:
     - MJRefresh
     - QMUIKit
     - ReactiveObjC
-    - YYKit
 
 EXTERNAL SOURCES:
   HGUIKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HGUIKit: 38249fb86ef551569d18fbe1f04305b4cb012256
+  HGUIKit: 93ba6b150a0c0d9572d5944adf0f7799a64e50db
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   QMUIKit: 15294d6a350466e4a6f4df0333eac5bff474f995
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
 PODFILE CHECKSUM: cbe8993790949def8ec27a2e0749bab62e64cadc
 

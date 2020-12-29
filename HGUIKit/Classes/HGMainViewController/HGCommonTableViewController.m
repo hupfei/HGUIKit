@@ -6,7 +6,6 @@
 #import "HGCommonTableViewController.h"
 #import <MJRefresh/MJRefresh.h>
 #import "HGUIMacros.h"
-#import <YYKit/YYReachability.h>
 #import <HGUITableViewCell.h>
 #import "NSObject+HGUI.h"
 #import "UIViewController+HGUI.h"
@@ -123,9 +122,9 @@
 }
 
 - (void) _startRequestData {
-    if (!YYReachability.reachability.reachable) {
-        return;
-    }
+//    if (!YYReachability.reachability.reachable) {
+//        return;
+//    }
     
     if (self.viewModel.hasHeaderRefresh) {
         [self.tableView.mj_header beginRefreshing];
@@ -181,22 +180,22 @@
     [self.viewModel.requestRemoteDataCmd.executing subscribeNext:^(NSNumber *executing) {
         if (!executing.boolValue) {
             @strongify(self)
-            if (YYReachability.reachability.reachable) {
-                // 有网络
+//            if (YYReachability.reachability.reachable) {
+//                // 有网络
                 if (self.viewModel.dataSource == nil || self.viewModel.dataSource.count == 0 || [self.viewModel.dataSource isKindOfClass:NSNull.class]) {
                     [self showEmptyViewWithImage:[NSObject imageWithName:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
                 } else {
                     [self hideEmptyView];
                 }
-            } else {
-                // 无网络
-                if (self.viewModel.dataSource.count > 0) {
-                    // 无网络，但是 dataSource 不为空，此时不需要展示无网络界面
-                    return;
-                }
-                
-                [self showEmptyViewWithImage:[NSObject imageWithName:@"HG_empty_no_network"] text:@"网络异常，请检查网络设置" detailText:nil buttonTitle:@"点击重试" buttonAction:@selector(_startRequestData)];
-            }
+//            } else {
+//                // 无网络
+//                if (self.viewModel.dataSource.count > 0) {
+//                    // 无网络，但是 dataSource 不为空，此时不需要展示无网络界面
+//                    return;
+//                }
+//
+//                [self showEmptyViewWithImage:[NSObject imageWithName:@"HG_empty_no_network"] text:@"网络异常，请检查网络设置" detailText:nil buttonTitle:@"点击重试" buttonAction:@selector(_startRequestData)];
+//            }
         }
     }];
 }

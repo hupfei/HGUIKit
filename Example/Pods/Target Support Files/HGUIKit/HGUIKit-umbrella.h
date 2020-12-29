@@ -22,7 +22,6 @@
 #import "NSObject+HGUI.h"
 #import "NSString+HGUI.h"
 #import "PAirSandbox.h"
-#import "UIColor+Chameleon.h"
 #import "UIImageView+CornerRadius.h"
 #import "UITableView+HGUI.h"
 #import "UIView+HGUI.h"

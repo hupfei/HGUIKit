@@ -7,9 +7,7 @@
 #import <WebKit/WebKit.h>
 #import "HGUIMacros.h"
 #import <QMUIKit/UIView+QMUI.h>
-#import <YYKit/UIColor+YYAdd.h>
-#import <YYKit/UIView+YYAdd.h>
-#import <YYKit/UIImage+YYAdd.h>
+#import <QMUIKit/UIImage+QMUI.h>
 
 @interface HGCommonWebViewController ()<WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
 
@@ -158,7 +156,7 @@
     if (!_bottomToolBar) {
         CGFloat h = 50 + self.view.qmui_safeAreaInsets.bottom;
         _bottomToolBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-h, self.view.frame.size.width, h)];
-        _bottomToolBar.backgroundColor = [UIColor colorWithHexString:@"#FAFAFA"];
+        _bottomToolBar.backgroundColor = [UIColor qmui_colorWithHexString:@"#FAFAFA"];
         _bottomToolBar.qmui_borderPosition = QMUIViewBorderPositionTop;
         [self.view addSubview:_bottomToolBar];
     }
@@ -167,9 +165,9 @@
 
 - (UIButton *)backBtn {
     if (!_backBtn) {
-        _backBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.bottomToolBar.width-160)/2.0, 0, 80, 50)];
-        [_backBtn setImage:[[UIImage imageNamed:@"HG_back"] imageByTintColor:UIColor.blackColor] forState:UIControlStateNormal];
-        [_backBtn setImage:[[UIImage imageNamed:@"HG_back"] imageByTintColor:[UIColor lightGrayColor]] forState:UIControlStateDisabled];
+        _backBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.bottomToolBar.qmui_width-160)/2.0, 0, 80, 50)];
+        [_backBtn setImage:[[UIImage imageNamed:@"HG_back"] qmui_imageWithTintColor:UIColor.blackColor] forState:UIControlStateNormal];
+        [_backBtn setImage:[[UIImage imageNamed:@"HG_back"] qmui_imageWithTintColor:[UIColor lightGrayColor]] forState:UIControlStateDisabled];
         _backBtn.tag = 0;
         [_backBtn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.bottomToolBar addSubview:_backBtn];
@@ -179,9 +177,9 @@
 
 - (UIButton *)forwardBtn {
     if (!_forwardBtn) {
-        _forwardBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.backBtn.right, self.backBtn.top, self.backBtn.width, self.backBtn.height)];
-        [_forwardBtn setImage:[[[UIImage imageNamed:@"HG_back"] imageByTintColor:UIColor.blackColor] imageByRotate180] forState:UIControlStateNormal];
-        [_forwardBtn setImage:[[[UIImage imageNamed:@"HG_back"] imageByTintColor:[UIColor lightGrayColor]] imageByRotate180] forState:UIControlStateDisabled];
+        _forwardBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.backBtn.qmui_right, self.backBtn.qmui_top, self.backBtn.qmui_width, self.backBtn.qmui_height)];
+        [_forwardBtn setImage:[[[UIImage imageNamed:@"HG_back"] qmui_imageWithTintColor:UIColor.blackColor] qmui_imageWithOrientation:UIImageOrientationRight] forState:UIControlStateNormal];
+        [_forwardBtn setImage:[[[UIImage imageNamed:@"HG_back"] qmui_imageWithTintColor:[UIColor lightGrayColor]] qmui_imageWithOrientation:UIImageOrientationRight] forState:UIControlStateDisabled];
         _forwardBtn.tag = 1;
         [_forwardBtn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.bottomToolBar addSubview:_forwardBtn];
