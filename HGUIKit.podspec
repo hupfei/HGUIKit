@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'HGUIKit'
   s.version          = '0.1.1'
   s.summary          = 'QMUIKit + MVVM'
-  s.description      = '通过 QMUIKit 快速创建 MVVM 框架'
+  s.description      = '基于 QMUIKit 快速创建 MVVM 框架'
   s.homepage         = 'https://github.com/hupfei/HGUIKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'hupfei' => 'HG_hupfei@163.com' }
@@ -26,8 +26,5 @@ Pod::Spec.new do |s|
   
   s.source_files = 'HGUIKit/Classes/**/*'
   s.resource = 'HGUIKit/HGUIKit.bundle'
-#  s.resource_bundles = {
-#    'HGUIKit' => ['HGUIKit/Assets/*.xcassets']
-#  }
-
+  
 end

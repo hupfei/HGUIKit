@@ -7,7 +7,6 @@
 #define HGUIKit_h
 
 #import "HGUIMacros.h"
-//#import "AppDelegate+HGUI.h"
 #import "NSFileManager+Paths.h"
 #import "NSObject+HGUI.h"
 #import "NSString+HGUI.h"
@@ -28,6 +27,5 @@
 #import "BindViewModelDelegate.h"
 #import "HGUICollectionViewCell.h"
 #import "HGUITableViewCell.h"
-#import <QMUIKit/QMUIKit.h>
 
 #endif /* HGUIKit_h */
