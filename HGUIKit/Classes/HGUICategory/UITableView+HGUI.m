@@ -4,7 +4,7 @@
 //
 
 #import "UITableView+HGUI.h"
-#import "QMUICore.h"
+#import <QMUIKit/QMUIKit.h>
 #import "HGUIMacros.h"
 
 @implementation UITableView (HGUI)
