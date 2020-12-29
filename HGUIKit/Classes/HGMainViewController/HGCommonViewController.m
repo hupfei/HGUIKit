@@ -4,9 +4,9 @@
 //
 
 #import "HGCommonViewController.h"
-#import <QMUIKit/QMUIRuntime.h>
 #import "NSObject+HGUI.h"
 #import "UIViewController+HGUI.h"
+#import <QMUIKit/QMUIKit.h>
 
 @interface HGCommonViewController ()
 

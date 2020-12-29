@@ -4,7 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUINavigationController.h"
+#import <QMUIKit/QMUIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -7,8 +7,9 @@
 #import <objc/runtime.h>
 #import <Photos/Photos.h>
 #import "UIViewController+HGUI.h"
-#import <QMUIKit/QMUITips.h>
+#import <QMUIKit/QMUIKit.h>
 #import "HGCommonViewController.h"
+
 @implementation NSObject (HGUI)
 
 + (UIImage *)imageWithName:(NSString *)name {

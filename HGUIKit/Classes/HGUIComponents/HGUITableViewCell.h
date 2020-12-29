@@ -4,7 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QMUITableViewCell.h"
+#import <QMUIKit/QMUIKit.h>
 #import "BindViewModelDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN

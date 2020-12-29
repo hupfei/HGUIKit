@@ -4,7 +4,7 @@
 //
 
 #import "HGCommonCollectionViewController.h"
-#import <QMUIKit/QMUIRuntime.h>
+#import <QMUIKit/QMUIKit.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "HGUIMacros.h"
 #import <MJRefresh/MJRefresh.h>

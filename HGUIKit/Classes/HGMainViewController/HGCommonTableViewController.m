@@ -9,6 +9,7 @@
 #import <HGUITableViewCell.h>
 #import "NSObject+HGUI.h"
 #import "UIViewController+HGUI.h"
+#import <QMUIKit/QMUIKit.h>
 
 @interface HGCommonTableViewModel()
 @property(nonatomic, weak, readwrite) UITableView *tableView;

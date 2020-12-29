@@ -6,8 +6,7 @@
 #import "HGCommonWebViewController.h"
 #import <WebKit/WebKit.h>
 #import "HGUIMacros.h"
-#import <QMUIKit/UIView+QMUI.h>
-#import <QMUIKit/UIImage+QMUI.h>
+#import <QMUIKit/QMUIKit.h>
 
 @interface HGCommonWebViewController ()<WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
 
