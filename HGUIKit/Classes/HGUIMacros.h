@@ -1,8 +1,6 @@
 //
 //  HGUIMacros.h
-//  HGTest
-//
-//  Created by apple on 2020/12/18.
+//  HGUIKit
 //
 
 #ifndef HGUIMacros_h

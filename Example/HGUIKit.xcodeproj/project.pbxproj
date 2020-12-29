@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18D23C07259AD48A00131D1D /* QMUIConfigurationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D23C06259AD48A00131D1D /* QMUIConfigurationTemplate.m */; };
 		3A383690572496ED3D5F9492 /* Pods_HGUIKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE34C2C90F8F2A08BF90F8F /* Pods_HGUIKit_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -16,13 +17,14 @@
 		6003F5A7195388D20070C39A /* HGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* HGViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		059378E2FBD138DD846B3882 /* Pods-HGUIKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGUIKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0796CF34B1A2536FECBE7A75 /* Pods-HGUIKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGUIKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-HGUIKit_Tests/Pods-HGUIKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		16100A4415FB52357A90A8A3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		18D23C05259AD48A00131D1D /* QMUIConfigurationTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMUIConfigurationTemplate.h; sourceTree = "<group>"; };
+		18D23C06259AD48A00131D1D /* QMUIConfigurationTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMUIConfigurationTemplate.m; sourceTree = "<group>"; };
 		26AA3BA1C60CA4BCA84EF4C7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* HGUIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HGUIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,10 +43,9 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		628EB79EE309CDAD2C59B1E4 /* HGUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HGUIKit.podspec; path = ../HGUIKit.podspec; sourceTree = "<group>"; };
+		628EB79EE309CDAD2C59B1E4 /* HGUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HGUIKit.podspec; path = ../HGUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6FE34C2C90F8F2A08BF90F8F /* Pods_HGUIKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGUIKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6C1EBD294AC0A2933DDE366 /* Pods-HGUIKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGUIKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HGUIKit_Tests/Pods-HGUIKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B80F4930D484DF1487BAD4D9 /* Pods-HGUIKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGUIKit_Example.release.xcconfig"; path = "Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FEF72A8201EED1CABDDD884C /* Pods_HGUIKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGUIKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +75,15 @@
 				0796CF34B1A2536FECBE7A75 /* Pods-HGUIKit_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		18D23C04259AD48A00131D1D /* QMUIConfigurationTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				18D23C05259AD48A00131D1D /* QMUIConfigurationTemplate.h */,
+				18D23C06259AD48A00131D1D /* QMUIConfigurationTemplate.m */,
+			);
+			path = QMUIConfigurationTemplate;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -114,11 +124,11 @@
 			children = (
 				6003F59C195388D20070C39A /* HGAppDelegate.h */,
 				6003F59D195388D20070C39A /* HGAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* HGViewController.h */,
 				6003F5A6195388D20070C39A /* HGViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
+				18D23C04259AD48A00131D1D /* QMUIConfigurationTemplate */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for HGUIKit";
@@ -175,6 +185,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				4FC7DF8D1FEB42E1D6980F24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 			);
@@ -233,6 +243,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4FC7DF8D1FEB42E1D6980F24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HGUIKit/HGUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/QMUIKit/QMUIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGUIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QMUIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BBF193F02838F4A45DF742FD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +300,7 @@
 			files = (
 				6003F59E195388D20070C39A /* HGAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* HGViewController.m in Sources */,
+				18D23C07259AD48A00131D1D /* QMUIConfigurationTemplate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

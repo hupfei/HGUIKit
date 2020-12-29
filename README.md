@@ -22,7 +22,7 @@ pod 'HGUIKit'
 
 ## Author
 
-973984457@qq.com, hupengfei@artapp.cn
+hupfei, HG_hupfei@163.com
 
 ## License
 

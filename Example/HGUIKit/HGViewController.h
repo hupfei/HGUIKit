@@ -2,12 +2,9 @@
 //  HGViewController.h
 //  HGUIKit
 //
-//  Created by 973984457@qq.com on 12/28/2020.
-//  Copyright (c) 2020 973984457@qq.com. All rights reserved.
-//
 
-@import UIKit;
+#import "HGCommonTableViewController.h"
 
-@interface HGViewController : UIViewController
+@interface HGViewController : HGCommonTableViewController
 
 @end
