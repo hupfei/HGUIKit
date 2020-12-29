@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HGUIKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'QMUIKit + MVVM'
   s.description      = '通过 QMUIKit 快速创建 MVVM 框架'
   s.homepage         = 'https://github.com/hupfei/HGUIKit'
