@@ -4,7 +4,6 @@
 //
 
 #import <QMUIKit/QMUIKit.h>
-#import "HGCommonViewController.h"
 #import "HGCommonTableViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN

@@ -9,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HGCommonTableViewModel : HGCommonViewModel
 
-/// 重用标识，默认为 HGUITableViewCell（identifier需要为cell的类名）
+/// 重用标识，默认为 @""（identifier需要为cell的类名）
 @property (nonatomic, copy, readonly) NSString *identifier;
 /// 默认UITableViewStylePlain
 @property (nonatomic, assign, readonly) UITableViewStyle style;

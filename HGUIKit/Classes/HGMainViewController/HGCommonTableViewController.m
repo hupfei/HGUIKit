@@ -5,11 +5,13 @@
 
 #import "HGCommonTableViewController.h"
 #import <MJRefresh/MJRefresh.h>
-#import "HGUIMacros.h"
 #import <HGUITableViewCell.h>
-#import "NSObject+HGUI.h"
 #import "UIViewController+HGUI.h"
 #import <QMUIKit/QMUIKit.h>
+
+@interface HGCommonViewModel ()
+@property (nonatomic, strong, readwrite) UIViewController *viewController;
+@end
 
 @interface HGCommonTableViewModel()
 @property(nonatomic, weak, readwrite) UITableView *tableView;
@@ -40,6 +42,7 @@
     self = [super initWithStyle:viewModel.style];
     if (self) {
         self.viewModel = viewModel;
+        self.viewModel.viewController = self;
     }
     return self;
 }
@@ -50,7 +53,7 @@
     if (self.qmui_isPresented) {
         // present 显示的，需要添加返回按钮
         if (self.navigationItem.leftBarButtonItem == nil) {
-            self.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:[NSObject imageWithName:@"HG_back"] target:self action:@selector(back)];
+            self.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:[self.viewModel imageWithName:@"HG_back"] target:self action:@selector(back)];
         }
     }
 }
@@ -184,7 +187,7 @@
 //            if (YYReachability.reachability.reachable) {
 //                // 有网络
                 if (self.viewModel.dataSource == nil || self.viewModel.dataSource.count == 0 || [self.viewModel.dataSource isKindOfClass:NSNull.class]) {
-                    [self showEmptyViewWithImage:[NSObject imageWithName:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
+                    [self showEmptyViewWithImage:[self.viewModel imageWithName:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
                 } else {
                     [self hideEmptyView];
                 }

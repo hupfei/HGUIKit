@@ -4,7 +4,6 @@
 //
 
 #import "HGCommonTableViewModel.h"
-#import "HGUITableViewCell.h"
 #import "UITableView+HGUI.h"
 
 @interface HGCommonTableViewModel ()
@@ -26,7 +25,7 @@
 - (void)didInitialize {
     [super didInitialize];
     
-    self.identifier = NSStringFromClass(HGUITableViewCell.class);
+    self.identifier = @"";
     self.style = UITableViewStylePlain;
     self.contentInset = UIEdgeInsetsZero;
     self.emptyTitle = @"暂无数据";
@@ -61,7 +60,10 @@
     }
     
     tableView.contentInset = _contentInset;
-    [tableView hg_registerCellWithClass:NSClassFromString(self.identifier)];
+    
+    if (self.identifier.length > 0) {
+        [tableView hg_registerCellWithClass:NSClassFromString(self.identifier)];
+    }
 }
 
 @end

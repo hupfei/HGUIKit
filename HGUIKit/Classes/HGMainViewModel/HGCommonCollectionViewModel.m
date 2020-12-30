@@ -4,8 +4,6 @@
 //
 
 #import "HGCommonCollectionViewModel.h"
-#import "HGUICollectionViewCell.h"
-#import "HGUIMacros.h"
 
 @interface HGCommonCollectionViewModel ()
 
@@ -34,8 +32,8 @@
     self.layout.sectionFootersPinToVisibleBounds = YES;
     self.layout.sectionInset = UIEdgeInsetsZero;
     
-    self.identifier = NSStringFromClass(HGUICollectionViewCell.class);
-    self.contentInset = UIEdgeInsetsMake(HGTopNavBarHeight, 0, 0, 0);
+    self.identifier = @"";
+    self.contentInset = UIEdgeInsetsZero;
     self.emptyTitle = @"暂无数据";
     self.emptyImage = @"HG_empty_default";
     self.pageNo = 1;
@@ -60,11 +58,13 @@
     
     collectionView.contentInset = _contentInset;
     
-    NSString *nibPath = [[NSBundle mainBundle] pathForResource:self.identifier ofType:@"nib"];
-    if (nibPath.length > 0) {
-        [collectionView registerNib:[UINib nibWithNibName:self.identifier bundle:nil] forCellWithReuseIdentifier:self.identifier];
-    } else {
-        [collectionView registerClass:NSClassFromString(self.identifier) forCellWithReuseIdentifier:self.identifier];
+    if (self.identifier.length > 0) {
+        NSString *nibPath = [[NSBundle mainBundle] pathForResource:self.identifier ofType:@"nib"];
+        if (nibPath.length > 0) {
+            [collectionView registerNib:[UINib nibWithNibName:self.identifier bundle:nil] forCellWithReuseIdentifier:self.identifier];
+        } else {
+            [collectionView registerClass:NSClassFromString(self.identifier) forCellWithReuseIdentifier:self.identifier];
+        }
     }
 }
 

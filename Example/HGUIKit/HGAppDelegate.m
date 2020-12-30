@@ -19,8 +19,9 @@
 }
 
 - (UIViewController *)generateWindowRootViewController {
-    HGCommonTableViewModel *mainVM = [[HGCommonTableViewModel alloc] initWithTitle:@"main" viewControllerClass:HGViewController.class];
-    HGCommonNavigationController *mainNavController = [[HGCommonNavigationController alloc] initWithRootViewController:mainVM.currentViewController];
+    HGCommonTableViewModel *mainVM = [[HGCommonTableViewModel alloc] initWithTitle:@"main"];
+    HGViewController *vc = [[HGViewController alloc] initWithViewModel:mainVM];
+    HGCommonNavigationController *mainNavController = [[HGCommonNavigationController alloc] initWithRootViewController:vc];
     return mainNavController;
 }
 

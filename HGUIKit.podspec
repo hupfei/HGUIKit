@@ -26,25 +26,18 @@ Pod::Spec.new do |s|
   s.source_files = 'HGUIKit/Classes/*.h'
   s.subspec 'HGMainViewController' do |ss|
   	ss.source_files = 'HGUIKit/Classes/HGMainViewController/*.{h,m}'
-  	ss.public_header_files = 'HGUIKit/Classes/HGMainViewController/*.{h}'
-  	ss.dependency 'HGUIKit/Classes/HGMainViewModel'
-  	ss.dependency 'HGUIKit/Classes/HGUIComponents'
+  	ss.dependency 'HGUIKit/HGMainViewModel'
+  	ss.dependency 'HGUIKit/HGUIComponents'
   end
   s.subspec 'HGMainViewModel' do |ss|
   	ss.source_files = 'HGUIKit/Classes/HGMainViewModel/*.{h,m}'
-  	ss.public_header_files = 'HGUIKit/Classes/HGMainViewModel/*.{h}'
-  	ss.dependency 'HGUIKit/Classes/HGMainViewController'
-  	ss.dependency 'HGUIKit/Classes/HGUIComponents'
-  	ss.dependency 'HGUIKit/Classes/HGUICategory'
+  	ss.dependency 'HGUIKit/HGUICategory'
   end
   s.subspec 'HGUICategory' do |ss|
   	ss.source_files = 'HGUIKit/Classes/HGUICategory/*.{h,m}'
-  	ss.public_header_files = 'HGUIKit/Classes/HGUICategory/*.{h}'
-	ss.dependency 'HGUIKit/Classes/HGMainViewController/HGCommonViewController.{h,m}'
   end
   s.subspec 'HGUIComponents' do |ss|
   	ss.source_files = 'HGUIKit/Classes/HGUIComponents/*.{h,m}'
-  	ss.public_header_files = 'HGUIKit/Classes/HGUIComponents/*.{h}'
   end
   
 end

@@ -12,16 +12,6 @@
 
 @implementation NSObject (HGUI)
 
-+ (UIImage *)imageWithName:(NSString *)name {
-    static NSBundle *resourceBundle = nil;
-    if (!resourceBundle) {
-        NSBundle *mainBundle = [NSBundle bundleForClass:HGCommonViewController.class];
-        NSString *resourcePath = [mainBundle pathForResource:@"HGUIKit" ofType:@"bundle"];
-        resourceBundle = [NSBundle bundleWithPath:resourcePath];
-    }
-    return [UIImage imageNamed:name inBundle:resourceBundle compatibleWithTraitCollection:nil];
-}
-
 - (void)showAlertViewWithTitle:(NSString *)title {
     [self showAlertViewWithTitle:title message:nil cancelButtonTitle:@"确定" okButtonTitle:nil handler:nil];
 }

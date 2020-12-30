@@ -9,8 +9,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (HGUI)
 
-+ (UIImage *)imageWithName:(NSString *)name;
-
 - (void)showAlertViewWithTitle:(NSString *)title;
 - (void)showAlertViewWithTitle:(NSString *)title message:(nullable NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle okButtonTitle:(nullable NSString *)okButtonTitle handler:(void (^__nullable)(void))okBlock;
 

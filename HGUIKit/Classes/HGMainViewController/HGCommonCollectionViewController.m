@@ -6,7 +6,6 @@
 #import "HGCommonCollectionViewController.h"
 #import <QMUIKit/QMUIKit.h>
 #import <ReactiveObjC/ReactiveObjC.h>
-#import "HGUIMacros.h"
 #import <MJRefresh/MJRefresh.h>
 #import "HGUICollectionViewCell.h"
 
@@ -68,7 +67,7 @@
 //            if (YYReachability.reachability.reachable) {
 //                // 有网络
                 if (self.viewModel.dataSource == nil || self.viewModel.dataSource.count == 0 || [self.viewModel.dataSource isKindOfClass:NSNull.class]) {
-                    [self showEmptyViewWithImage:HGUIImageMake(self.viewModel.emptyImage) text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
+                    [self showEmptyViewWithImage:[UIImage imageNamed:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
                 } else {
                     [self hideEmptyView];
                 }

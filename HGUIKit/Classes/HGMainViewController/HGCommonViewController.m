@@ -4,9 +4,11 @@
 //
 
 #import "HGCommonViewController.h"
-#import "NSObject+HGUI.h"
 #import "UIViewController+HGUI.h"
-#import <QMUIKit/QMUIKit.h>
+
+@interface HGCommonViewModel ()
+@property (nonatomic, strong, readwrite) UIViewController *viewController;
+@end
 
 @interface HGCommonViewController ()
 
@@ -35,6 +37,7 @@
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
+        self.viewModel.viewController = self;
     }
     return self;
 }
@@ -45,7 +48,7 @@
     if (self.qmui_isPresented) {
         // present 显示的，需要添加返回按钮
         if (self.navigationItem.leftBarButtonItem == nil) {
-            self.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:[NSObject imageWithName:@"HG_back"] target:self action:@selector(back)];
+            self.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:[self.viewModel imageWithName:@"HG_back"] target:self action:@selector(back)];
         }
     }
 }

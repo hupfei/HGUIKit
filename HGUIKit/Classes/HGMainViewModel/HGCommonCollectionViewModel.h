@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 默认 scrollDirection-UICollectionViewScrollDirectionVertical minimumLineSpacing-10 minimumInteritemSpacing-10
 @property (nonatomic, strong, readonly) UICollectionViewFlowLayout *layout;
-/// 重用标识，默认为 HGUICollectionCell（identifier需要为cell的类名）
+/// 重用标识，默认为空（identifier需要为cell的类名）
 @property (nonatomic, copy, readonly) NSString *identifier;
-/// 默认 UIEdgeInsetsMake(HGTopNavBarHeight, 0, 0, 0)
+/// 默认 UIEdgeInsetsZero
 @property (nonatomic, assign, readonly) UIEdgeInsets contentInset;
 /// 空白文字, 默认 "暂无数据"
 @property (nonatomic, copy, readonly) NSString *emptyTitle;
