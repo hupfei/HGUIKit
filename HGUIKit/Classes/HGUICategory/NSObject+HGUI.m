@@ -8,7 +8,6 @@
 #import <Photos/Photos.h>
 #import "UIViewController+HGUI.h"
 #import <QMUIKit/QMUIKit.h>
-#import "HGCommonViewController.h"
 
 @implementation NSObject (HGUI)
 

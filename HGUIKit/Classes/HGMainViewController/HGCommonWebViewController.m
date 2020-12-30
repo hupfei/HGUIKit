@@ -5,8 +5,9 @@
 
 #import "HGCommonWebViewController.h"
 #import <WebKit/WebKit.h>
-#import "HGUIMacros.h"
 #import <QMUIKit/QMUIKit.h>
+
+#define kTopNavBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height + 44)
 
 @interface HGCommonWebViewController ()<WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
 
@@ -133,7 +134,7 @@
         configuration.preferences.minimumFontSize = 10;
         configuration.userContentController = self.userContentController;
         
-        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, HGTopNavBarHeight, self.view.frame.size.width, HGTopNavBarHeight-HGTopNavBarHeight-50-self.view.qmui_safeAreaInsets.bottom) configuration:configuration];
+        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, kTopNavBarHeight, self.view.frame.size.width, kTopNavBarHeight-44-50-self.view.qmui_safeAreaInsets.bottom) configuration:configuration];
         _webView.navigationDelegate = self;
         _webView.UIDelegate = self;
         [self.view insertSubview:_webView belowSubview:self.progressView];
@@ -143,7 +144,7 @@
 
 - (UIProgressView *)progressView {
     if(!_progressView) {
-        _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, HGTopNavBarHeight, HGScreenWidth, 0)];
+        _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, kTopNavBarHeight, self.view.qmui_width, 0)];
         self.progressView.tintColor = [UIColor colorWithRed:22.f / 255.f green:126.f / 255.f blue:251.f / 255.f alpha:1.0];
         self.progressView.trackTintColor = [UIColor whiteColor];
         [self.view addSubview:self.progressView];
