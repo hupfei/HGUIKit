@@ -5,7 +5,6 @@
 
 #import "UITableView+HGUI.h"
 #import <QMUIKit/QMUIKit.h>
-#import "HGUIMacros.h"
 
 @implementation UITableView (HGUI)
 
@@ -101,7 +100,7 @@
     }else{
         left = leftSpace;
     }
-    lineLayer.frame = CGRectMake(CGRectGetMinX(bounds)+left, top, HGScreenWidth-left, lineHeight);
+    lineLayer.frame = CGRectMake(CGRectGetMinX(bounds)+left, top, [UIScreen mainScreen].bounds.size.width-left, lineHeight);
     lineLayer.backgroundColor = color;
     [layer addSublayer:lineLayer];
 }

@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "HGUIKit.h"
+#import "HGUIMacros.h"
 #import "HGCommonCollectionViewController.h"
 #import "HGCommonNavigationController.h"
 #import "HGCommonTableViewController.h"
@@ -29,8 +31,6 @@
 #import "BindViewModelDelegate.h"
 #import "HGUICollectionViewCell.h"
 #import "HGUITableViewCell.h"
-#import "HGUIKit.h"
-#import "HGUIMacros.h"
 
 FOUNDATION_EXPORT double HGUIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char HGUIKitVersionString[];

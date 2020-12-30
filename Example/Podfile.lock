@@ -1,8 +1,36 @@
 PODS:
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
   - HGUIKit (0.1.1):
+    - HGUIKit/HGMainViewController (= 0.1.1)
+    - HGUIKit/HGMainViewModel (= 0.1.1)
+    - HGUIKit/HGUICategory (= 0.1.1)
+    - HGUIKit/HGUIComponents (= 0.1.1)
     - MJRefresh
     - QMUIKit
     - ReactiveObjC
+  - HGUIKit/HGMainViewController (0.1.1):
+    - MJRefresh
+    - QMUIKit
+    - ReactiveObjC
+  - HGUIKit/HGMainViewModel (0.1.1):
+    - MJRefresh
+    - QMUIKit
+    - ReactiveObjC
+  - HGUIKit/HGUICategory (0.1.1):
+    - MJRefresh
+    - QMUIKit
+    - ReactiveObjC
+  - HGUIKit/HGUIComponents (0.1.1):
+    - MJRefresh
+    - QMUIKit
+    - ReactiveObjC
+  - MJExtension (3.2.2)
   - MJRefresh (3.5.0)
   - QMUIKit (4.2.1):
     - QMUIKit/QMUIComponents (= 4.2.1)
@@ -322,26 +350,42 @@ PODS:
   - QMUIKit/QMUIResources (4.2.1)
   - QMUIKit/QMUIWeakObjectContainer (4.2.1)
   - ReactiveObjC (3.1.1)
+  - YTKNetwork (3.0.4):
+    - AFNetworking/NSURLSession (~> 4.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - HGUIKit (from `../`)
+  - MJExtension
+  - YTKNetwork
+  - YYKit
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
+    - MJExtension
     - MJRefresh
     - QMUIKit
     - ReactiveObjC
+    - YTKNetwork
+    - YYKit
 
 EXTERNAL SOURCES:
   HGUIKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HGUIKit: 93ba6b150a0c0d9572d5944adf0f7799a64e50db
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  HGUIKit: 93651c13776a129f4a6d38a07b649686289aeaac
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   QMUIKit: 15294d6a350466e4a6f4df0333eac5bff474f995
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  YTKNetwork: a096f80c18c7e7cc0e623a0fbea0a1bfd3f5bcf2
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: cbe8993790949def8ec27a2e0749bab62e64cadc
+PODFILE CHECKSUM: 46695f62b0599dc050a057e4045caa2d9dd7a1cc
 
 COCOAPODS: 1.10.0

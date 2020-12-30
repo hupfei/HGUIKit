@@ -4,7 +4,6 @@
 //
 
 #import "UIViewController+HGUI.h"
-#import "HGUIMacros.h"
 
 @implementation UIViewController (HGUI)
 
@@ -24,7 +23,6 @@
     if (self.isViewLoaded) {
         return self;
     } else {
-        DebugLog(@"visibleViewControllerIfExist:，找不到可见的viewController。self = %@, self.view = %@, self.view.window = %@", self, [self isViewLoaded] ? self.view : nil, [self isViewLoaded] ? self.view.window : nil);
         return nil;
     }
 }

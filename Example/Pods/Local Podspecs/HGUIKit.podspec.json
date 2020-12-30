@@ -1,6 +1,6 @@
 {
   "name": "HGUIKit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "QMUIKit + MVVM",
   "description": "基于 QMUIKit 快速创建 MVVM 框架",
   "homepage": "https://github.com/hupfei/HGUIKit",
@@ -13,23 +13,77 @@
   },
   "source": {
     "git": "https://github.com/hupfei/HGUIKit.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "10.0"
   },
   "requires_arc": true,
-  "dependencies": {
-    "QMUIKit": [
+  "resources": "HGUIKit/HGUIKit.bundle",
+  "source_files": "HGUIKit/Classes/*.h",
+  "subspecs": [
+    {
+      "name": "HGMainViewController",
+      "source_files": "HGUIKit/Classes/HGMainViewController/*.*",
+      "dependencies": {
+        "HGUIKit/Classes/HGMainViewModel": [
 
-    ],
-    "ReactiveObjC": [
+        ],
+        "HGUIKit/Classes/HGUIMacros.h": [
 
-    ],
-    "MJRefresh": [
+        ],
+        "HGUIKit/Classes/HGUIComponents": [
 
-    ]
-  },
-  "source_files": "HGUIKit/Classes/**/*",
-  "resources": "HGUIKit/HGUIKit.bundle"
+        ],
+        "ReactiveObjC": [
+
+        ],
+        "MJRefresh": [
+
+        ]
+      }
+    },
+    {
+      "name": "HGMainViewModel",
+      "source_files": "HGUIKit/Classes/HGMainViewModel/*.*",
+      "dependencies": {
+        "HGUIKit/Classes/HGUIMacros.h": [
+
+        ],
+        "HGUIKit/Classes/HGMainViewController": [
+
+        ],
+        "HGUIKit/Classes/HGUIComponents": [
+
+        ],
+        "HGUIKit/Classes/HGUICategory": [
+
+        ],
+        "ReactiveObjC": [
+
+        ]
+      }
+    },
+    {
+      "name": "HGUICategory",
+      "source_files": "HGUIKit/Classes/HGUICategory/*.*",
+      "dependencies": {
+        "HGUIKit/Classes/HGMainViewController/HGCommonViewController.{h,m}": [
+
+        ],
+        "QMUIKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "HGUIComponents",
+      "source_files": "HGUIKit/Classes/HGUIComponents/*.*",
+      "dependencies": {
+        "QMUIKit": [
+
+        ]
+      }
+    }
+  ]
 }
