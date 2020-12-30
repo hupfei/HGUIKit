@@ -24,6 +24,7 @@
 #import "NSObject+HGUI.h"
 #import "NSString+HGUI.h"
 #import "PAirSandbox.h"
+#import "Reachability.h"
 #import "UIImageView+CornerRadius.h"
 #import "UITableView+HGUI.h"
 #import "UIView+HGUI.h"

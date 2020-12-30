@@ -1,6 +1,6 @@
 {
   "name": "HGUIKit",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "summary": "QMUIKit + MVVM",
   "description": "基于 QMUIKit 快速创建 MVVM 框架",
   "homepage": "https://github.com/hupfei/HGUIKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hupfei/HGUIKit.git",
-    "tag": "0.1.2"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "10.0"

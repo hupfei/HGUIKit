@@ -8,6 +8,7 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <MJRefresh/MJRefresh.h>
 #import "HGUICollectionViewCell.h"
+#import "Reachability.h"
 
 @interface HGCommonCollectionViewModel()
 @property(nonatomic, weak, readwrite) UICollectionView *collectionView;
@@ -64,30 +65,30 @@
     [self.viewModel.requestRemoteDataCmd.executing subscribeNext:^(NSNumber *executing) {
         if (!executing.boolValue) {
             @strongify(self)
-//            if (YYReachability.reachability.reachable) {
-//                // 有网络
+            if ([Reachability reachabilityForInternetConnection].isReachable) {
+                // 有网络
                 if (self.viewModel.dataSource == nil || self.viewModel.dataSource.count == 0 || [self.viewModel.dataSource isKindOfClass:NSNull.class]) {
                     [self showEmptyViewWithImage:[UIImage imageNamed:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
                 } else {
                     [self hideEmptyView];
                 }
-//            } else {
-//                // 无网络
-//                if (self.viewModel.dataSource.count > 0) {
-//                    // 无网络，但是 dataSource 不为空，此时不需要展示无网络界面
-//                    return;
-//                }
-//
-//                [self showEmptyViewWithImage:HGUIImageMake(@"HG_empty_no_network") text:@"网络异常，请检查网络设置" detailText:nil buttonTitle:@"点击重试" buttonAction:@selector(_startRequestData)];
-//            }
+            } else {
+                // 无网络
+                if (self.viewModel.dataSource.count > 0) {
+                    // 无网络，但是 dataSource 不为空，此时不需要展示无网络界面
+                    return;
+                }
+
+                [self showEmptyViewWithImage:[self.viewModel imageWithName:@"HG_empty_no_network"] text:@"网络异常，请检查网络设置" detailText:nil buttonTitle:@"点击重试" buttonAction:@selector(_startRequestData)];
+            }
         }
     }];
 }
 
 - (void) _startRequestData {
-//    if (!YYReachability.reachability.reachable) {
-//        return;
-//    }
+    if (![Reachability reachabilityForInternetConnection].isReachable) {
+        return;
+    }
     
     if (self.viewModel.hasHeaderRefresh) {
         [self.collectionView.mj_header beginRefreshing];

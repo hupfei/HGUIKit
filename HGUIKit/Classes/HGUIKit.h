@@ -7,6 +7,7 @@
 #define HGUIKit_h
 
 #import "HGUIMacros.h"
+#import "Reachability.h"
 #import "NSFileManager+Paths.h"
 #import "NSObject+HGUI.h"
 #import "NSString+HGUI.h"

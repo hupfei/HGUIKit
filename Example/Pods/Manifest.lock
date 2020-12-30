@@ -6,30 +6,30 @@ PODS:
   - AFNetworking/Reachability (4.0.1)
   - AFNetworking/Security (4.0.1)
   - AFNetworking/Serialization (4.0.1)
-  - HGUIKit (0.1.2):
-    - HGUIKit/HGMainViewController (= 0.1.2)
-    - HGUIKit/HGMainViewModel (= 0.1.2)
-    - HGUIKit/HGUICategory (= 0.1.2)
-    - HGUIKit/HGUIComponents (= 0.1.2)
+  - HGUIKit (0.1.3):
+    - HGUIKit/HGMainViewController (= 0.1.3)
+    - HGUIKit/HGMainViewModel (= 0.1.3)
+    - HGUIKit/HGUICategory (= 0.1.3)
+    - HGUIKit/HGUIComponents (= 0.1.3)
     - MJRefresh
     - QMUIKit
     - ReactiveObjC
-  - HGUIKit/HGMainViewController (0.1.2):
+  - HGUIKit/HGMainViewController (0.1.3):
     - HGUIKit/HGMainViewModel
     - HGUIKit/HGUIComponents
     - MJRefresh
     - QMUIKit
     - ReactiveObjC
-  - HGUIKit/HGMainViewModel (0.1.2):
+  - HGUIKit/HGMainViewModel (0.1.3):
     - HGUIKit/HGUICategory
     - MJRefresh
     - QMUIKit
     - ReactiveObjC
-  - HGUIKit/HGUICategory (0.1.2):
+  - HGUIKit/HGUICategory (0.1.3):
     - MJRefresh
     - QMUIKit
     - ReactiveObjC
-  - HGUIKit/HGUIComponents (0.1.2):
+  - HGUIKit/HGUIComponents (0.1.3):
     - MJRefresh
     - QMUIKit
     - ReactiveObjC
@@ -381,7 +381,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  HGUIKit: 77270671ab4651138c317d3a587f0202dd92bed7
+  HGUIKit: 820145a869ec4df3fdb403bc648038918f4f820b
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   QMUIKit: 15294d6a350466e4a6f4df0333eac5bff474f995

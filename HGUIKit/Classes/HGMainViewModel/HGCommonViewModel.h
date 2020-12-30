@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 对应的 viewController 的title
 @property (nonatomic, copy, readonly, nullable) NSString *title;
 /// 当前 VC
-@property (nonatomic, strong, readonly) UIViewController *viewController;
+@property (nonatomic, strong, readonly, nonnull) UIViewController *viewController;
 /**
  *  通过字典的方式给 viewModel 传参
  */

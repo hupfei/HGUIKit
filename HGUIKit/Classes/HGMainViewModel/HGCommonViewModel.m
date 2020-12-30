@@ -41,6 +41,10 @@
     return [UIImage imageNamed:name inBundle:resourceBundle compatibleWithTraitCollection:nil];
 }
 
+- (void)setViewController:(UIViewController * _Nonnull)viewController {
+    _viewController = viewController;
+}
+
 @end
 
 @implementation HGCommonViewModel (HGSubclassingHooks)
