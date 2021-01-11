@@ -15,6 +15,10 @@
 
 @implementation HGCommonViewModel
 
+- (instancetype)init {
+    return [self initWithTitle:nil];;
+}
+
 - (instancetype)initWithTitle:(nullable NSString *)title {
     return [self initWithTitle:title params:nil];
 }
@@ -36,7 +40,7 @@
     if (!resourceBundle) {
         NSBundle *mainBundle = [NSBundle bundleForClass:self.class];
         NSString *resourcePath = [mainBundle pathForResource:@"HGUIKit" ofType:@"bundle"];
-        resourceBundle = [NSBundle bundleWithPath:resourcePath];
+        resourceBundle = [NSBundle bundleWithPath:resourcePath] ?: mainBundle;
     }
     return [UIImage imageNamed:name inBundle:resourceBundle compatibleWithTraitCollection:nil];
 }

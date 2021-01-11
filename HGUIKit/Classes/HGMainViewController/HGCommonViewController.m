@@ -21,7 +21,7 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        ExtendImplementationOfVoidMethodWithoutArguments(HGCommonViewController.class, @selector(initSubviews), ^(HGCommonViewController *selfObject) {
+        ExtendImplementationOfVoidMethodWithoutArguments(HGCommonViewController.class, @selector(viewDidLoad), ^(HGCommonViewController *selfObject) {
             //绑定数据
             [selfObject bindViewModel];
             
@@ -37,6 +37,17 @@
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
+        // 此时为 viewmodel 中的 viewController 赋值
+        self.viewModel.viewController = self;
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.viewModel = [[HGCommonViewModel alloc] initWithTitle:@""];
+        // 此时为 viewmodel 中的 viewController 赋值
         self.viewModel.viewController = self;
     }
     return self;
@@ -48,7 +59,7 @@
     if (self.qmui_isPresented) {
         // present 显示的，需要添加返回按钮
         if (self.navigationItem.leftBarButtonItem == nil) {
-            self.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:[self.viewModel imageWithName:@"HG_back"] target:self action:@selector(back)];
+            self.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:[UIImage qmui_imageWithShape:QMUIImageShapeNavBack size:CGSizeMake(12, 20) tintColor:NavBarTintColor] target:self action:@selector(back)];
         }
     }
 }

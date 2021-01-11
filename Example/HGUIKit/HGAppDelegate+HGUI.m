@@ -2,9 +2,6 @@
 //  HGAppDelegate+HGUI.m
 //  HGUIKit_Example
 //
-//  Created by apple on 2020/12/29.
-//  Copyright © 2020 973984457@qq.com. All rights reserved.
-//
 
 #import "HGAppDelegate+HGUI.h"
 

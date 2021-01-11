@@ -27,7 +27,7 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        ExtendImplementationOfVoidMethodWithoutArguments(HGCommonTableViewController.class, @selector(initSubviews), ^(HGCommonTableViewController *selfObject) {
+        ExtendImplementationOfVoidMethodWithoutArguments(HGCommonTableViewController.class, @selector(viewDidLoad), ^(HGCommonTableViewController *selfObject) {
             //绑定数据
             [selfObject bindViewModel];
             
@@ -39,10 +39,21 @@
     });
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.viewModel = [[HGCommonTableViewModel alloc] initWithTitle:@""];
+        // 此时为 viewmodel 中的 viewController 赋值
+        self.viewModel.viewController = self;
+    }
+    return self;
+}
+
 - (instancetype)initWithViewModel:(HGCommonTableViewModel *)viewModel; {
     self = [super initWithStyle:viewModel.style];
     if (self) {
         self.viewModel = viewModel;
+        // 此时为 viewmodel 中的 viewController 赋值
         self.viewModel.viewController = self;
     }
     return self;
@@ -54,7 +65,7 @@
     if (self.qmui_isPresented) {
         // present 显示的，需要添加返回按钮
         if (self.navigationItem.leftBarButtonItem == nil) {
-            self.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:[self.viewModel imageWithName:@"HG_back"] target:self action:@selector(back)];
+            self.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:[UIImage qmui_imageWithShape:QMUIImageShapeNavBack size:CGSizeMake(12, 20) tintColor:NavBarTintColor] target:self action:@selector(back)];
         }
     }
 }
@@ -126,7 +137,7 @@
     }
 }
 
-- (void) _startRequestData {
+- (void)_startRequestData {
     if (![Reachability reachabilityForInternetConnection].isReachable) {
         return;
     }
@@ -183,6 +194,10 @@
     @weakify(self)
     // 占位图隐藏和显示
     [self.viewModel.requestRemoteDataCmd.executing subscribeNext:^(NSNumber *executing) {
+        if (self.tableView.qmui_staticCellDataSource.cellDataSections.count > 0) {
+            return;
+        }
+        
         if (!executing.boolValue) {
             @strongify(self)
             if ([Reachability reachabilityForInternetConnection].isReachable) {
@@ -201,6 +216,15 @@
 
                 [self showEmptyViewWithImage:[self.viewModel imageWithName:@"HG_empty_no_network"] text:@"网络异常，请检查网络设置" detailText:nil buttonTitle:@"点击重试" buttonAction:@selector(_startRequestData)];
             }
+        }
+    }];
+    
+    [[[RACObserve(self, self.tableView.qmui_staticCellDataSource) distinctUntilChanged] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(QMUIStaticTableViewCellDataSource *x) {
+        @strongify(self)
+        if (x.cellDataSections.count > 0) {
+            [self hideEmptyView];
+        } else {
+            [self showEmptyViewWithImage:[self.viewModel imageWithName:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
         }
     }];
 }

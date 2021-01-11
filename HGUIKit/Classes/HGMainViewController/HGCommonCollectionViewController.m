@@ -68,7 +68,7 @@
             if ([Reachability reachabilityForInternetConnection].isReachable) {
                 // 有网络
                 if (self.viewModel.dataSource == nil || self.viewModel.dataSource.count == 0 || [self.viewModel.dataSource isKindOfClass:NSNull.class]) {
-                    [self showEmptyViewWithImage:[UIImage imageNamed:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
+                    [self showEmptyViewWithImage:[self.viewModel imageWithName:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
                 } else {
                     [self hideEmptyView];
                 }
@@ -155,6 +155,7 @@
     }
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.isViewLoaded ? self.view.bounds : CGRectZero collectionViewLayout:self.viewModel.layout];
+    self.collectionView.backgroundColor = UIColorForBackground;
     _collectionView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
