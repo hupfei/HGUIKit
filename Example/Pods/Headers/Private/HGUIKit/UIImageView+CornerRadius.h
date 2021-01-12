@@ -1,0 +1,1 @@
+../../../../../HGUIKit/Classes/HGUICategory/UIImageView+CornerRadius.h

@@ -16,6 +16,20 @@
 
 }
 
+- (void)bindViewModel {
+    [super bindViewModel];
+    
+    @weakify(self);
+    [[[RACObserve(self, self.tableView.qmui_staticCellDataSource) distinctUntilChanged] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(QMUIStaticTableViewCellDataSource *x) {
+        @strongify(self)
+        if (x.cellDataSections.count > 0) {
+            [self hideEmptyView];
+        } else {
+            [self showEmptyViewWithImage:[self.viewModel imageWithName:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
+        }
+    }];
+}
+
 - (void)initTableView {
     [super initTableView];
     QMUIStaticTableViewCellDataSource *dataSource = [[QMUIStaticTableViewCellDataSource alloc] initWithCellDataSections:@[
@@ -110,6 +124,30 @@
                                                             d.didSelectTarget = self;
                                                             d.didSelectAction = @selector(handleCheckmarkCellEvent:);
                                                             d;
+                                                        }),
+                                                        ({
+                                                            QMUIStaticTableViewCellData *d = [[QMUIStaticTableViewCellData alloc] init];
+                                                            d.identifier = 9;
+                                                            d.text = @"选项 4";
+                                                            d.didSelectTarget = self;
+                                                            d.didSelectAction = @selector(handleCheckmarkCellEvent:);
+                                                            d;
+                                                        }),
+                                                        ({
+                                                            QMUIStaticTableViewCellData *d = [[QMUIStaticTableViewCellData alloc] init];
+                                                            d.identifier = 10;
+                                                            d.text = @"选项 5";
+                                                            d.didSelectTarget = self;
+                                                            d.didSelectAction = @selector(handleCheckmarkCellEvent:);
+                                                            d;
+                                                        }),
+                                                        ({
+                                                            QMUIStaticTableViewCellData *d = [[QMUIStaticTableViewCellData alloc] init];
+                                                            d.identifier = 11;
+                                                            d.text = @"选项 6";
+                                                            d.didSelectTarget = self;
+                                                            d.didSelectAction = @selector(handleCheckmarkCellEvent:);
+                                                            d;
                                                         })]
                                                       ]];
     
@@ -174,7 +212,5 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return section == 2 ? @"单选" : nil;
 }
-
-
 
 @end

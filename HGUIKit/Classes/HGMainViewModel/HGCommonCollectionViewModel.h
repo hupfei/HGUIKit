@@ -10,21 +10,21 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HGCommonCollectionViewModel : HGCommonViewModel
 
 /// 默认 scrollDirection-UICollectionViewScrollDirectionVertical minimumLineSpacing-10 minimumInteritemSpacing-10
-@property (nonatomic, strong, readonly) UICollectionViewFlowLayout *layout;
+@property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 /// 重用标识，默认为空（identifier需要为cell的类名）
-@property (nonatomic, copy, readonly) NSString *identifier;
+@property (nonatomic, copy) NSString *identifier;
 /// 默认 UIEdgeInsetsZero
-@property (nonatomic, assign, readonly) UIEdgeInsets contentInset;
+@property (nonatomic, assign) UIEdgeInsets contentInset;
 /// 空白文字, 默认 "暂无数据"
-@property (nonatomic, copy, readonly) NSString *emptyTitle;
+@property (nonatomic, copy) NSString *emptyTitle;
 /// 空白图片, 默认为 HG_empty_default
-@property (nonatomic, copy, readonly, nullable) NSString *emptyImage;
+@property (nonatomic, copy, nullable) NSString *emptyImage;
 /// 默认20
-@property (nonatomic, assign, readonly) NSUInteger pageSize;
+@property (nonatomic, assign) NSUInteger pageSize;
 /// 是否可以下拉刷新, 默认NO
-@property (nonatomic, assign, readonly) BOOL hasHeaderRefresh;
+@property (nonatomic, assign) BOOL hasHeaderRefresh;
 /// 是否可以上拉加载, 默认NO
-@property (nonatomic, assign, readonly) BOOL hasFooterRefresh;
+@property (nonatomic, assign) BOOL hasFooterRefresh;
 /// 数据源绑定到的列表，在 HGCommonCollectionViewController 中的 initCollectionView 里会自动被赋值
 @property(nonatomic, weak, readonly) UICollectionView *collectionView;
 

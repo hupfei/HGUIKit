@@ -1,0 +1,1 @@
+../../../../../HGUIKit/Classes/HGUIComponents/HGUICollectionViewCell.h

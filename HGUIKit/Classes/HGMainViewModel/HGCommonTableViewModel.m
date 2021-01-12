@@ -8,14 +8,6 @@
 
 @interface HGCommonTableViewModel ()
 
-@property (nonatomic, copy, readwrite) NSString *identifier;
-@property (nonatomic, assign, readwrite) UITableViewStyle style;
-@property (nonatomic, assign, readwrite) UIEdgeInsets contentInset;
-@property (nonatomic, copy, readwrite) NSString *emptyTitle;
-@property (nonatomic, copy, readwrite, nullable) NSString *emptyImage;
-@property (nonatomic, assign, readwrite) NSUInteger pageSize;
-@property (nonatomic, assign, readwrite) BOOL hasHeaderRefresh;
-@property (nonatomic, assign, readwrite) BOOL hasFooterRefresh;
 @property (nonatomic, assign, readwrite) BOOL hasMoreSections;
 
 @end

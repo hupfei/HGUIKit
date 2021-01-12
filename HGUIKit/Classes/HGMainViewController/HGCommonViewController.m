@@ -37,8 +37,6 @@
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
-        // 此时为 viewmodel 中的 viewController 赋值
-        self.viewModel.viewController = self;
     }
     return self;
 }
@@ -47,8 +45,6 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.viewModel = [[HGCommonViewModel alloc] initWithTitle:@""];
-        // 此时为 viewmodel 中的 viewController 赋值
-        self.viewModel.viewController = self;
     }
     return self;
 }
@@ -80,6 +76,9 @@
     if (self.navigationItem) {
         RAC(self, self.titleView.title) = RACObserve(self.viewModel, title);
     }
+    
+    // 此时为 viewmodel 中的 viewController 赋值
+    self.viewModel.viewController = self;
 }
 
 @end

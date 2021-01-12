@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example-resources.sh
+${PODS_ROOT}/../../HGUIKit/HGUIKit.bundle
+${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/QMUIKit/QMUIResources.bundle

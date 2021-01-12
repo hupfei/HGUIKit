@@ -142,6 +142,7 @@
 #import "UIMenuController+QMUI.h"
 #import "UINavigationBar+QMUI.h"
 #import "UINavigationController+QMUI.h"
+#import "UINavigationItem+QMUI.h"
 #import "UIScrollView+QMUI.h"
 #import "UISearchBar+QMUI.h"
 #import "UISearchController+QMUI.h"

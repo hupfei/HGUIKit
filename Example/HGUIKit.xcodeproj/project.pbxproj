@@ -17,13 +17,14 @@
 		18894BC7259B241100185E45 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18894BC3259B241000185E45 /* BaseRequest.m */; };
 		18894BC8259B241100185E45 /* ResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18894BC5259B241000185E45 /* ResponseModel.m */; };
 		18D23C07259AD48A00131D1D /* QMUIConfigurationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D23C06259AD48A00131D1D /* QMUIConfigurationTemplate.m */; };
-		3A383690572496ED3D5F9492 /* Pods_HGUIKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE34C2C90F8F2A08BF90F8F /* Pods_HGUIKit_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* HGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* HGAppDelegate.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		65F28130AA5583132844B623 /* libPods-HGUIKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CA3D12F99C612911C37393 /* libPods-HGUIKit_Example.a */; };
+		6B3E35DF25AD8E8400F49197 /* HGTestTableVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E35DE25AD8E8400F49197 /* HGTestTableVM.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -68,10 +69,12 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		628EB79EE309CDAD2C59B1E4 /* HGUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HGUIKit.podspec; path = ../HGUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6FE34C2C90F8F2A08BF90F8F /* Pods_HGUIKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGUIKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3E35DD25AD8E8400F49197 /* HGTestTableVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HGTestTableVM.h; sourceTree = "<group>"; };
+		6B3E35DE25AD8E8400F49197 /* HGTestTableVM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HGTestTableVM.m; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6C1EBD294AC0A2933DDE366 /* Pods-HGUIKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGUIKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HGUIKit_Tests/Pods-HGUIKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B80F4930D484DF1487BAD4D9 /* Pods-HGUIKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGUIKit_Example.release.xcconfig"; path = "Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E5CA3D12F99C612911C37393 /* libPods-HGUIKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HGUIKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF72A8201EED1CABDDD884C /* Pods_HGUIKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGUIKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,7 +86,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				3A383690572496ED3D5F9492 /* Pods_HGUIKit_Example.framework in Frameworks */,
+				65F28130AA5583132844B623 /* libPods-HGUIKit_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,8 +153,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				6FE34C2C90F8F2A08BF90F8F /* Pods_HGUIKit_Example.framework */,
 				FEF72A8201EED1CABDDD884C /* Pods_HGUIKit_Tests.framework */,
+				E5CA3D12F99C612911C37393 /* libPods-HGUIKit_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,6 +168,8 @@
 				18894B80259B200B00185E45 /* HGAppDelegate+HGUI.m */,
 				1853225C25A8455F008ADFAE /* HGTestVM.h */,
 				1853225D25A8455F008ADFAE /* HGTestVM.m */,
+				6B3E35DD25AD8E8400F49197 /* HGTestTableVM.h */,
+				6B3E35DE25AD8E8400F49197 /* HGTestTableVM.m */,
 				1853225325A83F01008ADFAE /* HGTestVC.h */,
 				1853225425A83F01008ADFAE /* HGTestVC.m */,
 				1853224A25A83ED9008ADFAE /* HGTestTableVC.h */,
@@ -233,7 +238,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				4FC7DF8D1FEB42E1D6980F24 /* [CP] Embed Pods Frameworks */,
+				0A4205D7F0D1A22BA2A3195D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,36 +296,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4FC7DF8D1FEB42E1D6980F24 /* [CP] Embed Pods Frameworks */ = {
+		0A4205D7F0D1A22BA2A3195D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/HGUIKit/HGUIKit.framework",
-				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/QMUIKit/QMUIKit.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
-				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
-				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGUIKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QMUIKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HGUIKit_Example/Pods-HGUIKit_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BBF193F02838F4A45DF742FD /* [CP] Check Pods Manifest.lock */ = {
@@ -355,6 +345,7 @@
 				6003F59E195388D20070C39A /* HGAppDelegate.m in Sources */,
 				18894BC6259B241100185E45 /* HttpRequest.m in Sources */,
 				18894BC8259B241100185E45 /* ResponseModel.m in Sources */,
+				6B3E35DF25AD8E8400F49197 /* HGTestTableVM.m in Sources */,
 				18894B81259B200B00185E45 /* HGAppDelegate+HGUI.m in Sources */,
 				18894BC7259B241100185E45 /* BaseRequest.m in Sources */,
 				1853224C25A83ED9008ADFAE /* HGTestTableVC.m in Sources */,
@@ -469,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8725JTY2H8;
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = HGUIKit/Info.plist;
@@ -488,6 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8725JTY2H8;
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = HGUIKit/Info.plist;

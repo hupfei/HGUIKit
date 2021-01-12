@@ -7,15 +7,6 @@
 
 @interface HGCommonCollectionViewModel ()
 
-@property (nonatomic, strong, readwrite) UICollectionViewFlowLayout *layout;
-@property (nonatomic, copy, readwrite) NSString *identifier;
-@property (nonatomic, assign, readwrite) UIEdgeInsets contentInset;
-@property (nonatomic, copy, readwrite) NSString *emptyTitle;
-@property (nonatomic, copy, readwrite, nullable) NSString *emptyImage;
-@property (nonatomic, assign, readwrite) NSUInteger pageSize;
-@property (nonatomic, assign, readwrite) BOOL hasHeaderRefresh;
-@property (nonatomic, assign, readwrite) BOOL hasFooterRefresh;
-
 @end
 
 @implementation HGCommonCollectionViewModel

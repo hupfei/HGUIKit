@@ -8,6 +8,7 @@
 #import "HGTestVC.h"
 #import "HGTestTableVC.h"
 #import "HGTestCollectionVC.h"
+#import "HGTestTableVM.h"
 
 @implementation HGAppDelegate
 
@@ -30,7 +31,7 @@
     HGCommonNavigationController *testNavC = [[HGCommonNavigationController alloc] initWithRootViewController:testVC];
     testNavC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"view" image:nil tag:0];
     
-    HGCommonTableViewModel *testTableVM = [[HGCommonTableViewModel alloc] initWithTitle:@"HGCommonTableViewController"];
+    HGTestTableVM *testTableVM = [[HGTestTableVM alloc] initWithTitle:@"HGCommonTableViewController"];
     HGTestTableVC *testTableVC = [[HGTestTableVC alloc] initWithViewModel:testTableVM];
     testTableVC.hidesBottomBarWhenPushed = NO;
     HGCommonNavigationController *testTableNavC = [[HGCommonNavigationController alloc] initWithRootViewController:testTableVC];

@@ -43,8 +43,6 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.viewModel = [[HGCommonTableViewModel alloc] initWithTitle:@""];
-        // 此时为 viewmodel 中的 viewController 赋值
-        self.viewModel.viewController = self;
     }
     return self;
 }
@@ -53,8 +51,6 @@
     self = [super initWithStyle:viewModel.style];
     if (self) {
         self.viewModel = viewModel;
-        // 此时为 viewmodel 中的 viewController 赋值
-        self.viewModel.viewController = self;
     }
     return self;
 }
@@ -191,6 +187,9 @@
         RAC(self, self.titleView.title) = RACObserve(self.viewModel, title);
     }
     
+    // 此时为 viewmodel 中的 viewController 赋值
+    self.viewModel.viewController = self;
+    
     @weakify(self)
     // 占位图隐藏和显示
     [self.viewModel.requestRemoteDataCmd.executing subscribeNext:^(NSNumber *executing) {
@@ -216,15 +215,6 @@
 
                 [self showEmptyViewWithImage:[self.viewModel imageWithName:@"HG_empty_no_network"] text:@"网络异常，请检查网络设置" detailText:nil buttonTitle:@"点击重试" buttonAction:@selector(_startRequestData)];
             }
-        }
-    }];
-    
-    [[[RACObserve(self, self.tableView.qmui_staticCellDataSource) distinctUntilChanged] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(QMUIStaticTableViewCellDataSource *x) {
-        @strongify(self)
-        if (x.cellDataSections.count > 0) {
-            [self hideEmptyView];
-        } else {
-            [self showEmptyViewWithImage:[self.viewModel imageWithName:self.viewModel.emptyImage] text:self.viewModel.emptyTitle detailText:nil buttonTitle:nil buttonAction:nil];
         }
     }];
 }

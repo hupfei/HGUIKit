@@ -1,0 +1,1 @@
+../../../../../HGUIKit/Classes/HGUICategory/NSObject+HGUI.h
